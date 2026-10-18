@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bean & Brew | Coffee Order</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="bean">☕</span><div><strong>Bean & Brew</strong><small>Freshly brewed, just for you</small></div></div>
+  <button class="cart-pill" id="cartJump">🛒 Cart <span id="cartCount">0</span></button>
+</header>
+<main>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">YOUR DAILY CUP OF HAPPINESS</p>
+      <h1>Good coffee.<br><em>Good mood.</em></h1>
+      <p>Handcrafted drinks made fresh when you order.</p>
+      <a href="#menu" class="hero-btn">Explore menu ↓</a>
+    </div>
+    <div class="hero-art" aria-label="Illustration of a coffee cup"><div class="steam">〰</div><div class="cup">☕</div><div class="saucer"></div></div>
+  </section>
+  <section id="menu" class="menu-section">
+    <div class="section-heading"><div><p class="eyebrow">BREWED WITH LOVE</p><h2>Our menu</h2></div><span class="menu-note">Choose your favourites</span></div>
+    <div class="filters" id="filters">
+      <button class="filter active" data-category="All">All drinks</button>
+      <button class="filter" data-category="Coffee">Coffee</button>
+      <button class="filter" data-category="Cold">Cold drinks</button>
+      <button class="filter" data-category="Tea">Tea</button>
+    </div>
+    <div class="products" id="products"></div>
+  </section>
+  <section class="order-section" id="cart">
+    <div class="order-head"><div><p class="eyebrow">READY WHEN YOU ARE</p><h2>Your order</h2></div><button class="clear-btn" id="clearCart">Clear cart</button></div>
+    <div class="order-layout">
+      <div class="cart-items" id="cartItems"><div class="empty"><span>🛍️</span><h3>Your cart is waiting</h3><p>Add a drink from the menu to get started.</p></div></div>
+      <aside class="summary">
+        <h3>Order summary</h3>
+        <div class="summary-row"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+        <div class="summary-row"><span>Packaging</span><strong id="packaging">₹0</strong></div>
+        <div class="summary-row total"><span>Total</span><strong id="total">₹0</strong></div>
+        <label for="customerName">Your name</label><input id="customerName" placeholder="Enter your name">
+        <label for="orderType">Order type</label><select id="orderType"><option value="Takeaway">Takeaway</option><option value="Dine-in">Dine-in</option></select>
+        <button class="checkout" id="checkout">Place order <span>→</span></button>
+        <p class="secure-note">Demo app · No payment is collected</p>
+      </aside>
+    </div>
+  </section>
+</main>
+<footer>☕ Bean & Brew <span>Made for coffee lovers</span></footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
